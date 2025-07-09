@@ -2,9 +2,9 @@
 
 #define KERNEL_STACK_SIZE 8192
 
-Process* cproc = NULL;
-Process* processes[256] = {0};
-int cpid = 0;
+static Process* cproc = NULL;
+static Process* processes[256] = {0};
+static int cpid = 0;
 
 int getpid() {
   for (int i = 0; i < 256; i++) { 
