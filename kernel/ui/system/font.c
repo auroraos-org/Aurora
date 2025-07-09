@@ -137,7 +137,7 @@ static const u8 FONT[128][8] = {
     { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}    // U+007F
 };
 
-void font_char(char c, size_t x, size_t y, u8 color, u8 scale) {
+void font_char(char c, size_t x, size_t y, u16 color, u8 scale) {
     assert(c >= 0, "INVALID CHARACTER");
     assert(scale > 0, "SCALE MUST BE POSITIVE");
 
@@ -157,7 +157,7 @@ void font_char(char c, size_t x, size_t y, u8 color, u8 scale) {
     }
 }
 
-void font_str(const char *s, size_t x, size_t y, u8 color, u8 scale) {
+void font_str(const char *s, size_t x, size_t y, u16 color, u8 scale) {
     char c;
     size_t char_width = 8 * scale;
 
