@@ -9,7 +9,7 @@
 #include "ui/system/screen.h"
 #include "../user/home/home.cpp"
 #include "core/process.h"
-#include "core/domain"
+#include "core/domain.h"
 
 
 u8 simple_program[] = {
