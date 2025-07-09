@@ -20,9 +20,11 @@ void test() {
 	__home();
 	u32 fake_entry_addr = 0x400000;  // Arbitrary user address
 	u32 fake_stack_addr = 0x800000;  // Arbitrary user stack top
+	Domain domain;
+	domain.placeholder = 0;
 	
 	// create some test proc.
-	Process* test_proc = process_create("test_proc", 0, Domain domain, fake_entry_addr, fake_stack_addr);
+	Process* test_proc = process_create("test_proc", 0, domain, fake_entry_addr, fake_stack_addr);
 	if (!test_proc) {
 	    LOG_ERROR("Failed to create test process");
 	    return;
