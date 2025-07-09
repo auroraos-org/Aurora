@@ -1,0 +1,6 @@
+{
+  "type": "exec",
+  "name": "polaris",
+  "requires": [ "polaris-mem", "polaris-core", "polaris-fs" ],
+  "ld": "../linker.ld"
+}
