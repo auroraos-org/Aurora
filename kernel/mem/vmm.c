@@ -109,11 +109,12 @@ static inline void pfault(struct Registers* regs) {
     u32 faddress; // error adress.
    
     asm("mov %%cr2, %0" : "=r" (faddress));
-    
+ 
     // error code
-    int present = !(regs->err_code & 0x1);
-    int rw = regs->err_code & 0x2;
-    int us = regs->err_code & 0x4;
+    // (these declarations are temporarily commented out since they are currently unused and only make -Wunused-variable warnings)
+    //int present = !(regs->err_code & 0x1);
+    //int rw = regs->err_code & 0x2;
+    //int us = regs->err_code & 0x4;
 
     
     panic("Page fault...."); // There is no printf yet, so i can't print the error code.. TODO: Make this possible
