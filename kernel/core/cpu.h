@@ -2,7 +2,7 @@
 #define CPU_H
 
 #include <util.h>
-
+#include <log.h>
 
 typedef struct cpu_state {
     u32 edi, esi, ebp, esp, ebx, edx, ecx, eax, es; 
