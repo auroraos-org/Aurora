@@ -90,7 +90,6 @@ void register_dump() {
     get_regs(&regs);
     
     log_print("CPU REGISTER DUMP:\n");
-    log_print("General Purpose Registers:\n");
     log_print("EAX: 0x"); log_print_hex(regs.eax);
     log_print(" EBX: 0x"); log_print_hex(regs.ebx);
     log_print(" ECX: 0x"); log_print_hex(regs.ecx);
