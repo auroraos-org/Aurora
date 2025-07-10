@@ -120,3 +120,5 @@ void register_dump() {
     
     log_print("EFLAGS: 0x"); log_print_hex(regs.eflags);
     log_print("\n");
+
+}
