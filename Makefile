@@ -3,7 +3,7 @@ CXX = g++
 NASM=nasm
 LD=ld
 
-INCLUDE= -Ikernel/include 
+INCLUDE= -Ikernel/include user/stdlib 
 
 GFLAGS=
 CCFLAGS=-m32 -std=c11 -O2 -g -Wall -Wextra -Wpedantic -Wstrict-aliasing $(INCLUDE)
