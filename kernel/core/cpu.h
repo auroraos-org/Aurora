@@ -10,4 +10,6 @@ typedef struct cpu_state {
     u32 eip, cs, gs, ds, fs, eflags, useresp, ss;           
 } cpu_state_t;
 
+void register_dump();
+
 #endif // CPU_H
