@@ -1,5 +1,9 @@
 #include "../include/error.h"
 #include <log.h>
+#include "cpu.h"
+
+
+
 
 void panic(const char *err) {
     screen_clear(COLOR(63, 0, 0));
@@ -10,7 +14,8 @@ void panic(const char *err) {
     
     LOG_ERROR(" core/error.c: PANIC called with \"");
     log_print(err);
-    log_print("\"...");
+    log_print("\"...\n\n");
+    register_dump();
     screen_swap();     
     for (;;) {}
   
