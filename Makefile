@@ -54,6 +54,7 @@ dirs:
 clean:
 	rm -rf bin
 	find kernel -name "*.o" -type f -delete
+	find user -name "*.o" -type f -delete
 	rm -f ./*.iso
 	rm -f ./**/*.elf
 	rm -f ./**/*.bin

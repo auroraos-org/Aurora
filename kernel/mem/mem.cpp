@@ -1,6 +1,6 @@
 #include "../include/mem.h"
 
-/*
+
 void* operator new(unsigned int size) {
   return (void*) 0x0000; // Placeholder, no fs nor memory system is implemented.
 }
@@ -18,7 +18,7 @@ void operator delete[](void* ptr) {
   (void)ptr;
   return;
 }
-*/
+
 
 typedef struct block {
     u32 size;

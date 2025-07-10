@@ -53,7 +53,7 @@ extern "C" void _main(u32 magic) {
 
     bool quit = false;
 
-    LOG_INFO(" kernel/main.cpp: Entering main loop!");
+    LOG_INFO(" kernel/main.cpp: Entering main loop! \n ");
 	
     while (quit != true) {
         screen_clear(COLOR(0, 0, 7));

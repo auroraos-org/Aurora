@@ -79,7 +79,12 @@ Process* process_create(char* name, int ppid, Domain domain, u32 entry, u32 stac
   // set the table slot.
   processes[pid] = proc;
 
-  LOG_INFO(" core/process.c: Created process!");
+  char buffer[20];
+  itoa(pid, buffer, sizeof(buffer));
+    
+  LOG_INFO(" core/process.c: Created process with PID ");
+  log_print(buffer);
+  log_print(". \n");
   return proc;
 }
 
